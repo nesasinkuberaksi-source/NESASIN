@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sekolah Modern</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+ font-family:'Segoe UI',sans-serif;
+ background:#0f172a;
+ color:#e2e8f0;
+}
+
+/* NAV */
+nav{
+ position:fixed;width:100%;top:0;
+ background:rgba(15,23,42,0.85);
+ z-index:1000;
+}
+nav .container{
+ max-width:1200px;margin:auto;
+ display:flex;justify-content:space-between;
+ align-items:center;
+ padding:15px;
+ flex-wrap:wrap;
+}
+nav h1{color:#38bdf8;}
+nav a{
+ color:#cbd5e1;
+ margin-left:15px;
+ text-decoration:none;
+}
+nav a:hover{color:#38bdf8;}
+
+/* HERO */
+.hero{
+ height:100vh;
+ position:relative;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+}
+.hero img{
+ position:absolute;
+ width:100%;
+ height:100%;
+ object-fit:cover;
+ opacity:0;
+ transition:1s;
+}
+.hero img.active{opacity:1;}
+
+.hero::before{
+ content:"";
+ position:absolute;inset:0;
+ background:linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.4),rgba(0,0,0,0.7));
+}
+
+.hero-content{position:relative;z-index:2;}
+.hero h1{
+ font-size:48px;
+ color:#fff;
+ text-shadow:0 2px 10px rgba(0,0,0,0.9);
+}
+.hero p{color:#e2e8f0;}
+
+/* BUTTON */
+.btn{
+ margin-top:10px;
+ padding:12px 25px;
+ background:#38bdf8;
+ border:none;border-radius:6px;
+ cursor:pointer;
+ font-weight:bold;
+}
+.btn:hover{background:#0ea5e9;}
+
+/* SECTION BESAR */
+.section-full{
+ padding:100px 20px;
+ text-align:center;
+}
+.container{max-width:1000px;margin:auto;}
+
+h2{margin-bottom:20px;color:#fff;}
+p{color:#e2e8f0;}
+
+/* WARNA PAPAN */
+.profil{background:linear-gradient(to right,#4c1d95,#6d28d9);}
+.kelas{background:linear-gradient(to right,#1e3a8a,#1e40af);}
+.pramuka{background:linear-gradient(to right,#78350f,#92400e);}
+.olahraga{background:linear-gradient(to right,#9a3412,#dc2626);}
+.osis{background:linear-gradient(to right,#9d174d,#be123c);}
+.kontak{background:#020617;}
+
+/* ANIMASI */
+.fade{opacity:0;transform:translateY(30px);transition:0.7s;}
+.fade.show{opacity:1;transform:translateY(0);}
+
+/* FOOTER */
+footer{
+ text-align:center;
+ padding:20px;
+ background:#000;
+ color:#aaa;
+}
+
+/* HP */
+@media(max-width:768px){
+.hero h1{font-size:30px;}
+.hero p{font-size:16px;}
+nav .container{flex-direction:column;align-items:flex-start;}
+nav div{display:flex;flex-wrap:wrap;margin-top:10px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="container">
+<h1>NESASINKU</h1>
+<div>
+<a href="#profil">Profil</a>
+<a href="#kelas">Kelas</a>
+<a href="#pramuka">Pramuka</a>
+<a href="#olahraga">Olahraga</a>
+<a href="#osis">OSIS</a>
+<a href="#kontak">Kontak</a>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<img src="olahraga.jpeg" class="active">
+<img src="PRAMUKA.jpeg">
+<img src="GURU.jpeg">
+
+<div class="hero-content">
+<h1>SMP NEGERI 1 SINDANG</h1>
+<p>BERAKSI</p>
+<button class="btn" onclick="location.href='#profil'">Mulai</button>
+</div>
+</section>
+
+<!-- PROFIL -->
+<section id="profil" class="section-full profil fade">
+  <div class="container">
+
+    <h2>Profil Sekolah</h2>
+
+    <p class="lead">
+      SMPN 1 Sindang Beraksi adalah wujud semangat sekolah dalam menciptakan lingkungan belajar yang aktif, kreatif, dan inspiratif. Setiap guru dan siswa berperan aktif dalam berbagai kegiatan akademik maupun ekstrakurikuler, mulai dari olahraga, seni, hingga inovasi teknologi.
+    </p>
+
+    <p class="lead">
+      Dengan moto <b>“Beraksi”</b>, sekolah ini mendorong seluruh warga sekolah untuk berinisiatif, berkreasi, dan berkontribusi nyata bagi prestasi, karakter, dan kemajuan masyarakat. SMPN 1 Sindang bukan hanya tempat belajar, tetapi juga laboratorium aksi nyata untuk membentuk generasi unggul.
+    </p>
+
+    <!-- VISI -->
+    <div class="profil-box">
+      <h3>Visi</h3>
+      <p>
+        “Terwujudnya peserta didik yang berkarakter, berprestasi, berkompetensi, dan berakhlak mulia melalui lingkungan pendidikan yang aman, nyaman, dan berdaya saing.”
+      </p>
+    </div>
+
+    <!-- MISI -->
+    <div class="profil-box">
+      <h3>Misi</h3>
+      <ul>
+        <li>Menciptakan suasana belajar yang aktif, kreatif, inovatif, dan menyenangkan.</li>
+        <li>Mengembangkan potensi akademik maupun non-akademik siswa secara optimal.</li>
+        <li>Menanamkan nilai karakter, kedisiplinan, dan budaya beraksi di lingkungan sekolah.</li>
+        <li>Meningkatkan kompetensi guru dan kualitas proses pembelajaran secara berkelanjutan.</li>
+        <li>Memperkuat kerja sama antara sekolah, keluarga, dan masyarakat.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- KELAS -->
+<section id="kelas" class="section-full kelas fade">
+<div class="container">
+<h2>Kelas</h2>
+<p>Informasi kelas 7, 8, dan 9.</p>
+<button class="btn" onclick="window.location.href='https://arjunanesasin-cloud.github.io/beraksisistem/'">
+Buka Kelas
+</button>
+</div>
+</section>
+
+<!-- PRAMUKA -->
+<section id="pramuka" class="section-full pramuka fade">
+<div class="container">
+<h2>Eskul Pramuka</h2>
+<p>Kegiatan pembinaan karakter dan kedisiplinan.</p>
+<button class="btn">Lihat Kegiatan</button>
+</div>
+</section>
+
+<!-- OLAHRAGA -->
+<section id="olahraga" class="section-full olahraga fade">
+<div class="container">
+<h2>Eskul Olahraga</h2>
+<p>Futsal, Voli, dan kegiatan fisik lainnya.</p>
+<button class="btn">Lihat Detail</button>
+</div>
+</section>
+
+<!-- OSIS -->
+<section id="osis" class="section-full osis fade">
+<div class="container">
+<h2>OSIS</h2>
+<p>Organisasi siswa untuk kepemimpinan.</p>
+<button class="btn" onclick="window.location.href='osis.html'">
+Masuk OSIS
+</button>
+</div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="section-full kontak fade">
+<div class="container">
+<h2>Kontak</h2>
+<p>Email: info@sekolah.com</p>
+</div>
+</section>
+
+<footer>© 2026 NESASIN TIM KODING</footer>
+
+<script>
+const slides=document.querySelectorAll(".hero img");
+let i=0;
+setInterval(()=>{
+ slides[i].classList.remove("active");
+ i=(i+1)%slides.length;
+ slides[i].classList.add("active");
+},4000);
+
+const sections=document.querySelectorAll("section");
+const observer=new IntersectionObserver((entries)=>{
+ entries.forEach(e=>{
+  if(e.isIntersecting) e.target.classList.add("show");
+ });
+});
+sections.forEach(s=>observer.observe(s));
+</script>
+
+</body>
+</html>
